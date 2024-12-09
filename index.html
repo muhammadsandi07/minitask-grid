@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minitask-flex&grid</title>
+
+    <style>
+      #main {
+        width: 100vw;
+        height: 500px;
+      }
+      .container-one {
+        display: flex;
+        border: 1px solid #e3e3e3;
+        width: 800px;
+        margin: auto;
+        height: 500px;
+        gap: 10px;
+        margin-bottom: 10rem;
+      }
+      .box {
+        height: 100px;
+      }
+      .flex-one {
+        background-color: aqua;
+        flex: 1 0 100px;
+      }
+      .flex-two {
+        background-color: blueviolet;
+        flex: 2 1 50px;
+      }
+
+      .flex-three {
+        background-color: red;
+        flex: 1 2 80px;
+      }
+      .flex-four {
+        background-color: green;
+        flex: 3 2 70px;
+      }
+      .flex-five {
+        background-color: blue;
+        flex: 4 2 110px;
+      }
+
+      .container-two {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-top: 4rem;
+        border: 1px solid #e3e3e3;
+        width: 800px;
+        margin: auto;
+        width: 800px;
+        height: 500px;
+        gap: 10px;
+        margin-bottom: 10rem;
+      }
+
+      .box1 {
+        flex: 0 0 50px;
+        background-color: aquamarine;
+      }
+      .box2 {
+        flex: 0 0 50px;
+        background-color: blueviolet;
+      }
+
+      /* soal 3 */
+      .container-three {
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+        margin-top: 4rem;
+        border: 1px solid #e3e3e3;
+        width: 800px;
+        margin: auto;
+        width: 800px;
+        height: 500px;
+        gap: 10px;
+        margin-bottom: 10rem;
+      }
+      .box1 {
+        background-color: aqua;
+      }
+      .box2 {
+        background-color: pink;
+      }
+      .container-four {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-top: 4rem;
+        border: 1px solid #e3e3e3;
+        width: 800px;
+        margin: auto;
+        width: 800px;
+        height: 500px;
+        gap: 10px;
+        margin-bottom: 10rem;
+      }
+      .box1 {
+        background-color: aqua;
+      }
+      .box2 {
+        background-color: pink;
+      }
+      .container-five {
+        display: grid;
+        margin-top: 4rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        border: 1px solid #e3e3e3;
+        grid-template-areas:
+          'a a b'
+          'c c b'
+          'd d e';
+
+        width: 800px;
+        height: 500px;
+        gap: 10px;
+        margin-bottom: 10rem;
+        width: 800px;
+        margin: auto;
+      }
+      .box1 {
+        background-color: aqua;
+      }
+      .box2 {
+        background-color: pink;
+      }
+      .grid1 {
+        background-color: aqua;
+        grid-area: a;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .grid2 {
+        background-color: yellow;
+        grid-area: b;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .grid3 {
+        background-color: green;
+        grid-area: c;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .grid4 {
+        background-color: red;
+        grid-area: d;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .grid5 {
+        background-color: purple;
+        grid-area: e;
+        display: flex;
+        justify-content: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <div class="container-one">
+        <div class="box flex-one">1</div>
+        <div class="box flex-two">2</div>
+        <div class="box flex-three">3</div>
+        <div class="box flex-four">4</div>
+        <div class="box flex-five">5</div>
+      </div>
+      <div class="container-two">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+      </div>
+
+      <div class="container-three">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+      </div>
+      <div class="container-four">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+      </div>
+      <div class="container-five">
+        <div class="grid1">1</div>
+        <div class="grid2">2</div>
+        <div class="grid3">3</div>
+        <div class="grid4">4</div>
+        <div class="grid5">5</div>
+      </div>
+    </main>
+  </body>
+</html>
